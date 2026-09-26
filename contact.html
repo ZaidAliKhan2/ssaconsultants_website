@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0B1020">
+  <meta name="description" content="Talk to SSA Consulting about what you want to improve, build or simplify. Share your business needs and explore the next step.">
+  <meta property="og:title" content="Contact | SSA Consulting Inc.">
+  <meta property="og:description" content="Let’s talk about what’s next. Tell SSA Consulting what your business needs.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-cover.svg">
+  <title>Contact | SSA Consulting Inc.</title>
+  <link rel="icon" href="assets/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" sizes="180x180">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body class="contact-page" data-page="contact">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <site-header></site-header>
+  <main id="main-content">
+    <section class="contact-hero section-dark" aria-labelledby="contact-page-title">
+      <div class="contact-hero-lines" aria-hidden="true"><span></span><span></span></div>
+      <div class="container">
+        <h1 id="contact-page-title">Let’s talk about<br><em>what’s next.</em></h1>
+        <p>Tell us what you’re trying to improve, build or simplify. We’ll help identify where SSA can make the biggest difference.</p>
+      </div>
+    </section>
+
+    <section class="contact-inquiry section" id="inquiry" aria-labelledby="contact-intro-title">
+      <div class="container contact-layout">
+        <div class="contact-intro">
+          <h2 id="contact-intro-title">Let’s start<br>with the basics.</h2>
+          <p>Tell us what your business is working on, what you want to improve, or where things feel stuck.</p>
+          <p class="contact-reassurance"><strong>Not sure which service fits?</strong><br>Tell us about the problem instead.</p>
+          <dl class="contact-details">
+            <div><dt>Email</dt><dd><a href="mailto:info@ssaconsultantinc.com">info@ssaconsultantinc.com</a></dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+12893051049">289-305-1049</a></dd></div>
+            <div><dt>Location</dt><dd>Mississauga, Ontario</dd></div>
+          </dl>
+        </div>
+        <form class="inquiry-form" id="inquiry-form" method="post" action="https://api.web3forms.com/submit" aria-labelledby="inquiry-form-title">
+          <h3 id="inquiry-form-title">Tell us what you have in mind.</h3>
+          <input type="hidden" name="access_key" value="d39cbba5-35f6-4f37-8da2-ba0aee957d8f">
+          <input type="hidden" name="subject" value="New SSA Consulting Website Inquiry">
+          <input type="hidden" name="from_name" value="SSA Consulting Website">
+          <input type="checkbox" name="botcheck" hidden tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="inquiry-required-note">Fields marked * are required.</p>
+          <div class="inquiry-fields">
+            <div class="inquiry-field">
+              <label for="inquiry-name">Full name <span aria-hidden="true">*</span></label>
+              <input id="inquiry-name" name="name" type="text" autocomplete="name" maxlength="120" required aria-describedby="inquiry-name-error">
+              <p class="inquiry-error" id="inquiry-name-error" hidden></p>
+            </div>
+            <div class="inquiry-field">
+              <label for="inquiry-email">Email address <span aria-hidden="true">*</span></label>
+              <input id="inquiry-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" maxlength="254" required aria-describedby="inquiry-email-error">
+              <p class="inquiry-error" id="inquiry-email-error" hidden></p>
+            </div>
+            <div class="inquiry-field inquiry-field-wide">
+              <label for="inquiry-company">Company / business name <span class="inquiry-optional">(optional)</span></label>
+              <input id="inquiry-company" name="company" type="text" autocomplete="organization" maxlength="160">
+            </div>
+          </div>
+          <fieldset class="inquiry-services" aria-describedby="inquiry-services-hint">
+            <legend>Services of interest <span class="inquiry-optional">(optional)</span></legend>
+            <p id="inquiry-services-hint">Choose any that apply, or leave this open.</p>
+            <div class="inquiry-service-options">
+              <label class="inquiry-service"><input type="checkbox" name="services" value="sales-pos"><span>Sales &amp; POS</span></label>
+              <label class="inquiry-service"><input type="checkbox" name="services" value="web-development"><span>Web Development</span></label>
+              <label class="inquiry-service"><input type="checkbox" name="services" value="customer-experience"><span>Customer Experience</span></label>
+              <label class="inquiry-service"><input type="checkbox" name="services" value="digital-marketing"><span>Digital Marketing</span></label>
+              <label class="inquiry-service"><input type="checkbox" name="services" value="ai-automation"><span>AI &amp; Automation</span></label>
+            </div>
+          </fieldset>
+          <div class="inquiry-field">
+            <label for="inquiry-message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="inquiry-message" name="message" rows="6" maxlength="5000" required aria-describedby="inquiry-message-hint inquiry-message-error"></textarea>
+            <p class="inquiry-hint" id="inquiry-message-hint">What would you like to improve, build or simplify?</p>
+            <p class="inquiry-error" id="inquiry-message-error" hidden></p>
+          </div>
+          <div class="inquiry-actions">
+            <button class="button button-primary" type="submit" disabled><span data-submit-label>Send Inquiry</span> <span aria-hidden="true">→</span></button>
+            <p class="inquiry-status" id="inquiry-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
+            <p class="inquiry-hint" id="inquiry-delivery-help" hidden>You can also email us directly at <a href="mailto:info@ssaconsultantinc.com">info@ssaconsultantinc.com</a>.</p>
+            <noscript><p class="inquiry-hint">Please enable JavaScript to send this form, or email <a href="mailto:info@ssaconsultantinc.com">info@ssaconsultantinc.com</a>.</p></noscript>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact-next" aria-labelledby="contact-next-title">
+      <div class="container">
+        <h2 id="contact-next-title">What happens next?</h2>
+        <p class="contact-next-intro">Once you’ve reached us, here’s how the conversation develops.</p>
+        <div class="contact-next-steps">
+          <article><h3>We review your inquiry</h3><p>We look at what you’re trying to improve and the context you provide.</p></article>
+          <article><h3>We get in touch</h3><p>We follow up to better understand the business need.</p></article>
+          <article><h3>We define the next step</h3><p>If there’s a fit, we discuss the right approach and which SSA capabilities make sense.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <site-footer></site-footer>
+  <dialog class="inquiry-confirmation" id="inquiry-confirmation" aria-labelledby="inquiry-confirmation-title" aria-describedby="inquiry-confirmation-copy" aria-modal="true">
+    <p class="inquiry-confirmation-label">Message sent</p>
+    <h2 id="inquiry-confirmation-title">Thank you.</h2>
+    <p id="inquiry-confirmation-copy">Your inquiry has been sent successfully.<br>We’ll be in touch using the contact information you provided.</p>
+    <button class="button button-primary" type="button" data-confirmation-close autofocus>Done</button>
+  </dialog>
+  <script type="module" src="js/contact.js"></script>
+</body>
+</html>

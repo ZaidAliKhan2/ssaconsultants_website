@@ -1,0 +1,65 @@
+/* One continuous scene; all decorative layers stay behind the content. */
+.hero { position: relative; isolation: isolate; display: flex; align-items: center; min-height: max(700px, 92svh); padding: 145px 0 125px; overflow: hidden; color: var(--white); background: var(--ink); }
+.hero-atmosphere { position: absolute; z-index: -1; inset: 0; overflow: hidden; pointer-events: none; }
+.hero-grid { position: absolute; inset: 0; background-image: linear-gradient(#ffffff04 1px, transparent 1px), linear-gradient(90deg,#ffffff04 1px,transparent 1px); background-size: 88px 88px; mask-image: linear-gradient(110deg,transparent 5%,#000 60%,transparent); }
+.hero-field { position: absolute; inset: -15%; transform: translate3d(calc(var(--hero-x, 0px) * .75),calc(var(--hero-y, 0px) * .75 - var(--hero-scroll, 0px) * .55),0); }
+.hero-light { position: absolute; inset: 0; background: radial-gradient(ellipse at 72% 30%,#4f6bff2e,transparent 46%),radial-gradient(ellipse at 20% 78%,#4f6bff18,transparent 40%); animation: hero-light-sweep 7s linear -2s infinite; }
+.hero-structure { position: absolute; inset: -7%; }
+.hero-paths { width: 100%; height: 100%; max-width: none; }
+.hero-form-depth { transform: translate3d(calc(var(--hero-x, 0px) * -.5),calc(var(--hero-y, 0px) * -.5 - var(--hero-scroll, 0px) * .4),0); }
+.hero-arc-depth { transform: translate3d(var(--hero-x, 0px),calc(var(--hero-y, 0px) - var(--hero-scroll, 0px)),0); }
+.hero-form { transform-origin: 50% 50%; animation: hero-form-drift 12s ease-in-out -3s infinite; }
+.hero-arcs { animation: hero-arc-drift 9s ease-in-out -2s infinite; }
+.hero-signal { offset-path: path("M-180 1110 C470 950 260 600 840 350 S1450 210 1780 20"); animation: hero-signal-travel 10s linear -4s infinite; }
+.hero-quiet-zone { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 48%,#0b1020b8 0%,#0b102070 35%,transparent 72%),linear-gradient(0deg,var(--ink),transparent 18%,transparent 85%,#0b102066); }
+.hero-layout { position: relative; width: min(calc(100% - 64px),1200px); text-align: center; }
+.hero-content { max-width: 1160px; margin-inline: auto; }
+.hero-title { margin: 0 auto 30px; font-size: clamp(3.25rem,6.1vw,5.65rem); font-weight: 600; letter-spacing: -.055em; line-height: 1.07; }
+.hero-title em { color: #8ea0ff; font-style: normal; }
+.title-line { display: block; overflow: hidden; padding-bottom: .08em; }.title-line > span { display: block; }
+.hero-copy { max-width: 670px; margin: 0 auto 36px; color: #b0b8ca; font-size: clamp(1rem,1.25vw,1.1rem); line-height: 1.8; }
+.hero .button-row { justify-content: center; }
+.hero.is-motion-paused :is(.hero-light, .hero-form, .hero-arcs, .hero-signal) { animation-play-state: paused; }
+@keyframes hero-light-sweep {
+  0% { transform: translate3d(-18%,3%,0); opacity: 0; }
+  18%, 75% { opacity: .85; }
+  100% { transform: translate3d(18%,-3%,0); opacity: 0; }
+}
+@keyframes hero-form-drift {
+  0%, 100% { transform: translate3d(-30px,16px,0) scale(1.02); }
+  50% { transform: translate3d(30px,-16px,0) scale(1.055); }
+}
+@keyframes hero-arc-drift {
+  0%, 100% { transform: translate3d(26px,-14px,0); }
+  50% { transform: translate3d(-26px,14px,0); }
+}
+@keyframes hero-signal-travel {
+  0% { offset-distance: 0%; opacity: 0; }
+  15%, 80% { opacity: .7; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+@media (max-width: 900px) {
+  .hero { min-height: max(660px,90svh); padding: 135px 0 110px; }
+  .hero-layout { width: calc(100% - 40px); }
+  .hero-title { font-size: clamp(3.1rem,7.8vw,4.3rem); }
+  .hero-copy { max-width: 600px; }
+  .hero-structure { inset: -8% -40%; opacity: .75; }
+}
+@media (max-width: 620px) {
+  .hero { min-height: 90svh; padding: 135px 0 110px; }
+  .hero-layout { width: calc(100% - 36px); }
+  .hero-title { font-size: clamp(2.65rem,10.6vw,3.7rem); line-height: 1.1; margin-bottom: 25px; }
+  .hero-copy { font-size: .96rem; line-height: 1.75; }
+  .hero .button-row { max-width: 350px; margin-inline: auto; }
+  .hero-grid { background-size: 65px 65px; opacity: .6; }
+  .hero-arcs { animation: none; }
+  .hero-signal { display: none; }
+  .hero-form { animation-duration: 14s; }
+  .hero-light { animation-duration: 8s; }
+  .hero-structure { inset: -5% -85%; opacity: .6; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-light, .hero-form, .hero-arcs, .hero-signal { animation: none; }
+  .hero-field, .hero-form-depth, .hero-arc-depth { transform: none; }
+  .hero-signal { display: none; }
+}

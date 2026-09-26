@@ -1,0 +1,51 @@
+/* The default is a readable story. JS enhances only sufficiently large viewports. */
+.ai-story { position: relative; color: var(--white); background: var(--ink); }
+.ai-story-sticky { position: relative; isolation: isolate; padding: 110px 0; }
+.ai-story-image, .ai-story-shade { position: absolute; z-index: -2; inset: 0; overflow: hidden; }
+.ai-story-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.ai-story-shade { z-index: -1; background: linear-gradient(90deg,rgba(11,16,32,.91),rgba(11,16,32,.38)), linear-gradient(0deg,rgba(11,16,32,.6),transparent 45%); }
+.ai-story-layout { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(55px,8vw,135px); align-items: start; }
+.ai-story-copy .eyebrow { color: #b1beff; }
+.ai-story-copy h2 { font-size: clamp(2.6rem,4.6vw,4.3rem); line-height: 1.08; }
+.ai-story-copy > p:not(.eyebrow) { max-width: 470px; color: #d0d5e0; font-size: 1rem; }
+.ai-story-copy .text-link { margin-top: 15px; color: white; }
+.ai-story-skip { display: block; width: fit-content; margin-top: 34px; color: #c2c9da; font-size: .7rem; border-bottom: 1px solid #ffffff40; }
+.ai-story-panels { display: grid; gap: 24px; }
+.ai-story-panel { position: relative; width: 100%; max-width: 500px; padding: clamp(30px,3.5vw,50px); border: 1px solid #ffffff2e; border-top: 2px solid var(--blue); background: rgba(11,16,32,.92); box-shadow: 0 25px 65px #00000020; }
+.ai-story-panel > svg { width: 25px; height: 25px; margin-bottom: 34px; color: #9dacff; }
+.ai-story-verb { margin-bottom: 22px; font: 500 clamp(2.8rem,4.2vw,4rem)/1 var(--font-display); letter-spacing: -.045em; }
+.ai-story-panel h3 { margin-bottom: 15px; font-size: 1.2rem; line-height: 1.35; letter-spacing: -.02em; }
+.ai-story-panel > p:last-child { margin: 0; max-width: 360px; color: #bcc5d6; font-size: .92rem; line-height: 1.75; }
+.ai-story-progress { display: none; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: #ffffff20; }.ai-story-progress span { display: block; height: 100%; background: var(--blue); transform: scaleX(0); transform-origin: left; }
+/* 420vh yields 320vh of travel against a fixed 100vh stage. No scroll interception. */
+@media (min-width: 1000px) and (min-height: 680px) and (prefers-reduced-motion: no-preference) {
+  .ai-story.is-pinned { height: 420vh; }
+  .ai-story.is-pinned .ai-story-sticky { position: sticky; top: 0; height: 100vh; padding: 0; overflow: hidden; }
+  .ai-story.is-pinned .ai-story-layout { height: 100%; align-items: center; }
+  .ai-story.is-pinned .ai-story-panels { position: relative; height: 100%; display: block; }
+  .ai-story.is-pinned .ai-story-panel { position: absolute; top: 50%; left: 0; }
+  .ai-story.is-pinned .ai-story-progress { display: block; }
+  .ai-story.is-pinned.is-nearby .ai-story-panel { will-change: transform, opacity; }
+  .ai-story.is-pinned.is-nearby .ai-story-image img { will-change: transform; }
+}
+@media (max-width: 999px), (max-height: 679px) {
+  .ai-story-sticky { padding: 85px 0; }
+  .ai-story-layout { grid-template-columns: 1fr; gap: 60px; }
+  .ai-story-copy { max-width: 620px; }
+  .ai-story-image { height: min(850px, 100%); }
+  .ai-story-shade { background: linear-gradient(0deg,var(--ink) 0%,rgba(11,16,32,.55) 80%,rgba(11,16,32,.7)); }
+  .ai-story-panels { max-width: 620px; width: 100%; margin-left: auto; }
+  .ai-story-panel { max-width: none; }
+  .ai-story-skip { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ai-story-layout { grid-template-columns: 1fr; gap: 55px; }
+  .ai-story-copy { max-width: 650px; }
+  .ai-story-panels { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .ai-story-skip { display: none; }
+}
+@media (max-width: 620px) {
+  .ai-story-panels { grid-template-columns: 1fr; }
+  .ai-story-copy h2 { font-size: 2.6rem; }
+  .ai-story-panel { padding: 30px 26px; }
+}

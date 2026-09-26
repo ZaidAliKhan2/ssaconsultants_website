@@ -1,0 +1,47 @@
+:root {
+  --ink: #0b1020;
+  --dark-surface: #121827;
+  --blue: #4f6bff;
+  --blue-dark: #3f58e8;
+  --blue-soft: #eef1ff;
+  --white: #fff;
+  --off-white: #f6f7f9;
+  --text: #101828;
+  --text-muted: #667085;
+  --border: #e4e7ec;
+  --dark-border: rgba(255, 255, 255, 0.13);
+  --font-display: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --container: 1320px;
+  --nav-height: 86px;
+  --radius: 12px;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--text); background: var(--white); font-family: var(--font-body); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body.menu-open { overflow: hidden; }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.035em; line-height: 1.08; }
+h2 { margin-bottom: 24px; font-size: clamp(2.45rem, 5vw, 3.55rem); font-weight: 600; }
+h3 { font-weight: 600; }
+.container { width: min(calc(100% - 48px), var(--container)); margin-inline: auto; }
+.section { position: relative; padding: 132px 0; }
+.section-dark { color: var(--white); background: var(--ink); }
+.section-heading { display: grid; grid-template-columns: 1fr auto; align-items: end; margin-bottom: 64px; }
+.section-heading h2 { margin-bottom: 0; }
+.section-heading > p:last-child { width: 380px; margin: 0 0 5px 40px; color: var(--text-muted); font-size: 1.05rem; }
+.section-heading-light > p:last-child { color: rgba(255,255,255,.6); }
+.skip-link { position: fixed; z-index: 999; top: 12px; left: 12px; padding: 10px 16px; color: var(--white); background: var(--blue); transform: translateY(-150%); transition: transform .2s; }
+.skip-link:focus { transform: translateY(0); }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+::selection { color: var(--white); background: var(--blue); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}

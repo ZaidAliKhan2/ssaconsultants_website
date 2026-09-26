@@ -1,0 +1,117 @@
+/* Standalone Why SSA page; the homepage's why-ssa.css remains independent. */
+.why-page :is(section, #footer-contact) { scroll-margin-top: 100px; }
+.why-page-section { padding: 100px 0; }
+.why-page-hero { position: relative; isolation: isolate; display: flex; align-items: center; min-height: clamp(560px,72svh,780px); padding: 155px 0 90px; overflow: hidden; }
+.why-hero-content { position: relative; z-index: 1; }
+.why-page-hero h1 { margin: 0 0 32px; max-width: 1000px; font-size: clamp(3.6rem,6.6vw,6rem); font-weight: 600; line-height: 1.06; letter-spacing: -.05em; }
+.why-page-hero em { color: #a5b4ff; font-style: normal; }
+.why-hero-content > p { max-width: 560px; margin: 0; color: #b9c2d5; font-size: 1.05rem; line-height: 1.85; }
+.why-hero-paths { position: absolute; z-index: -1; top: 0; right: -8%; width: 75%; height: 100%; color: var(--blue); opacity: .42; }
+.why-hero-path-base { stroke: #8396d1; stroke-width: 1; opacity: .28; }
+.why-hero-path-signal { stroke: currentColor; stroke-width: 1.5; stroke-dasharray: .16 .84; animation: why-path-flow 14s linear infinite; }
+@keyframes why-path-flow { to { stroke-dashoffset: -1; } }
+.why-problem-layout { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(40px,6vw,90px); }
+.why-problem-layout h2 { max-width: 570px; font-size: clamp(2.4rem,3.6vw,3.4rem); }
+.why-problem-layout p { max-width: 530px; color: var(--text-muted); font-size: .98rem; line-height: 1.85; }
+.why-problem-layout p:last-child { margin-bottom: 0; }
+.why-problem-figure { margin: 0; min-width: 0; }
+.why-problem-figure figcaption { margin-top: 20px; color: var(--text-muted); text-align: center; font-size: .83rem; }
+.why-business-map, .why-comparison-map { position: relative; min-width: 0; height: 340px; }
+.why-business-map svg, .why-comparison-map svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.why-map-lines { stroke: var(--blue); stroke-width: 1.25; opacity: .5; }
+.why-map-lines path { stroke-dasharray: 1; }
+.why-map-node, .why-map-business, .why-map-partner { position: absolute; transform: translate(-50%,-50%); white-space: nowrap; }
+.why-map-node { padding: 8px 6px; color: var(--text-muted); background: var(--white); font-size: .88rem; }
+.why-node-marketing { left: 18%; top: 16%; }.why-node-web { left: 80%; top: 16%; }
+.why-node-sales { left: 14%; top: 75%; }.why-node-support { left: 85%; top: 75%; }
+.why-node-technology { left: 50%; top: 90%; }
+.why-map-business { left: 50%; top: 50%; padding: 13px 18px; border-block: 1px solid var(--border); background: var(--white); color: var(--text); font: 600 clamp(1.05rem,1.7vw,1.4rem)/1.3 var(--font-display); letter-spacing: -.025em; }
+.why-reasons { background: var(--off-white); }
+.why-section-heading { margin-bottom: 48px; }
+.why-reason-rows, .why-outcome-rows { border-top: 1px solid var(--border); }
+.why-reason-row, .why-outcome-row { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(40px,8vw,115px); padding: 34px 0; border-bottom: 1px solid var(--border); }
+.why-reason-row::after, .why-outcome-row::after { position: absolute; right: 0; bottom: -1px; left: 0; height: 1px; content: ''; background: var(--blue); transform: scaleX(0); transform-origin: left; transition: transform .45s var(--ease); }
+.why-reason-row h3 { margin: 0; font-size: clamp(1.9rem,3.1vw,2.8rem); line-height: 1.16; transition: translate .4s var(--ease); }
+.why-reason-row p, .why-outcome-row p { max-width: 500px; margin: 0; color: var(--text-muted); line-height: 1.8; }
+@media (hover: hover) and (pointer: fine) {
+  .why-reason-row:hover::after, .why-outcome-row:hover::after { transform: scaleX(1); }
+  .why-reason-row:hover h3 { translate: 4px 0; }
+}
+.why-comparison-heading { display: flex; align-items: end; justify-content: space-between; gap: 55px; margin-bottom: 45px; }
+.why-comparison-heading h2 { margin: 0; max-width: 780px; font-size: clamp(2.5rem,4vw,3.7rem); }
+.why-comparison-heading > p { max-width: 300px; margin: 0; color: #b9c2d5; font-size: .95rem; }
+.why-comparison-controls:not([hidden]) { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--dark-border); }
+.why-comparison-controls button { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 70px; padding: 18px 24px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #aeb9ce; text-align: left; font: 500 1.1rem/1.4 var(--font-display); cursor: pointer; transition: color .25s, background .25s, border-color .25s; }
+.why-comparison-controls button[aria-pressed="true"] { border-color: var(--blue); color: var(--white); background: #4f6bff12; }
+.why-comparison-controls button:hover { color: white; background: #ffffff06; }
+.why-comparison-controls button:focus-visible { outline-offset: -4px; }
+.why-comparison-controls span { color: #a5b4ff; }
+/* Both approaches are complete in normal flow when JavaScript is unavailable. */
+.why-comparison-views { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.why-comparison-view { min-width: 0; padding-top: 32px; }
+.why-comparison-copy h3 { margin: 0 0 20px; font-size: clamp(1.6rem,2.6vw,2.3rem); line-height: 1.2; }
+.why-comparison-copy > p { margin-bottom: 24px; color: #b9c2d5; font-size: .94rem; line-height: 1.8; }
+.why-comparison-copy ul { margin: 0; padding: 0; list-style: none; }
+.why-comparison-copy li { padding: 12px 0; border-top: 1px solid var(--dark-border); color: #d2d9e7; font-size: .85rem; }
+.why-comparison-map .why-map-node { color: #b9c2d5; background: var(--ink); }
+.why-comparison-map .why-map-business { color: var(--white); background: var(--ink); border-color: #ffffff38; }
+.why-fragment-paths { stroke: #8390a9; stroke-width: 1.25; opacity: .7; }
+.why-connected-paths { stroke: #8295ff; stroke-width: 1.5; }
+.why-map-partner { top: 15%; left: 50%; padding: 8px 20px; background: var(--ink); color: #a5b4ff; font: 600 1.8rem/1.3 var(--font-display); letter-spacing: -.04em; }
+.why-connected-growth { top: 85%; left: 16%; }.why-connected-support { top: 85%; left: 50%; }.why-connected-technology { top: 85%; left: 84%; }
+.why-comparison.is-enhanced .why-comparison-views { display: block; }
+.why-comparison.is-enhanced .why-comparison-view:not([hidden]) { display: grid; grid-template-columns: 1.25fr 1fr; align-items: center; gap: clamp(40px,7vw,100px); min-height: 395px; }
+.why-comparison-view.is-active { animation: why-comparison-enter .45s var(--ease); }
+.why-comparison-view.is-active .why-connected-paths path { stroke-dasharray: 1; animation: why-connection-draw .7s var(--ease); }
+@keyframes why-comparison-enter { from { opacity: .35; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes why-connection-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+.why-comparison-status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.why-outcomes { background: var(--white); }
+.why-outcome-row { padding-block: 27px; }
+.why-outcome-row h3 { margin: 0; font-size: clamp(1.35rem,2.1vw,1.85rem); line-height: 1.3; }
+.why-outcome-row p { font-size: .96rem; }
+@media (max-width: 900px) {
+  .why-page-section { padding: 80px 0; }
+  .why-page-hero { min-height: 62svh; padding: 140px 0 85px; }
+  .why-page-hero h1 { font-size: clamp(3rem,7.8vw,5rem); }
+  .why-hero-paths { width: 100%; right: -20%; opacity: .3; }
+  .why-problem-layout { grid-template-columns: 1fr; gap: 35px; }
+  .why-problem-layout h2 { max-width: 680px; }.why-problem-layout p { max-width: 620px; }
+  .why-problem-figure { width: 100%; max-width: 600px; margin-inline: auto; }
+  .why-comparison-heading { display: block; }
+  .why-comparison-heading > p { max-width: 520px; margin-top: 24px; }
+  .why-comparison.is-enhanced .why-comparison-view:not([hidden]) { grid-template-columns: 1fr 1fr; gap: 30px; }
+  .why-comparison-controls button { font-size: 1rem; padding-inline: 16px; }
+  .why-comparison-map { height: 320px; }
+  .why-comparison-map .why-map-node { font-size: .75rem; padding-inline: 3px; }
+  .why-comparison-map .why-map-business { padding-inline: 10px; }
+}
+@media (max-width: 620px) {
+  .why-page-section { padding: 68px 0; }
+  .why-page-hero { min-height: 0; padding: 130px 0 90px; }
+  .why-page-hero h1 { font-size: clamp(2.45rem,9vw,3.6rem); }
+  .why-hero-content > p { font-size: .96rem; }
+  .why-hero-paths { width: 150%; right: -50%; opacity: .2; }
+  .why-problem-layout h2, .why-comparison-heading h2 { font-size: 2.35rem; }
+  .why-business-map { height: 280px; }
+  .why-map-node { font-size: .78rem; }
+  .why-map-business { font-size: 1.05rem; padding-inline: 12px; }
+  .why-section-heading { margin-bottom: 34px; font-size: 2.35rem; }
+  .why-reason-row, .why-outcome-row { grid-template-columns: 1fr; gap: 18px; padding-block: 28px; }
+  .why-reason-row h3 { font-size: 2rem; }.why-reason-row h3 br { display: none; }
+  .why-reason-row p, .why-outcome-row p { font-size: .94rem; }
+  .why-comparison-heading { margin-bottom: 30px; }
+  .why-comparison-controls button { gap: 8px; padding: 15px 10px; font-size: .9rem; }
+  .why-comparison-controls span { display: none; }
+  .why-comparison-views { grid-template-columns: 1fr; gap: 35px; }
+  .why-comparison.is-enhanced .why-comparison-view:not([hidden]) { grid-template-columns: 1fr; gap: 24px; padding-top: 10px; }
+  .why-comparison-map { height: 260px; }
+  .why-comparison-copy h3 { font-size: 1.8rem; }
+  .why-comparison-copy > p { font-size: .92rem; }
+  .why-comparison-copy li { font-size: .82rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .why-hero-path-signal, .why-comparison-view.is-active, .why-comparison-view.is-active .why-connected-paths path { animation: none; }
+  .why-reason-row:hover h3 { translate: none; }
+  .why-reason-row::after, .why-outcome-row::after, .why-reason-row h3 { transition: none; }
+}

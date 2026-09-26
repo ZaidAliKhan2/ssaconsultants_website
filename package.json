@@ -1,0 +1,13 @@
+{
+  "name": "ssa-consulting-homepage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static SSA Consulting Inc. homepage",
+  "scripts": {
+    "serve": "python3 -m http.server 4173",
+    "test": "node tests/check.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}

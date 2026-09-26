@@ -1,0 +1,194 @@
+
+
+@media (max-width: 900px) {
+  :root {
+    --nav-height: 74px;
+  }
+  .container {
+    width: min(calc(100% - 40px), var(--container));
+  }
+  .section {
+    padding: 100px 0;
+  }
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .site-header {
+    z-index: 1001;
+  }
+  body.menu-open {
+    position: fixed;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+  }
+  body.menu-open .site-header,
+  body.menu-open .site-header.scrolled {
+    border-color: transparent;
+    background: #0B1020;
+    backdrop-filter: none;
+  }
+  .mobile-panel {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: calc(var(--nav-height) + 24px + env(safe-area-inset-top, 0px)) 26px calc(32px + env(safe-area-inset-bottom, 0px));
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: #0B1020;
+    -webkit-overflow-scrolling: touch;
+  }
+  .mobile-panel.is-open {
+    display: flex;
+  }
+  .mobile-panel a {
+    flex: none;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--dark-border);
+    color: rgba(255, 255, 255, 0.85);
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+  }
+  .mobile-panel .button {
+    width: 100%;
+    margin-top: 28px;
+    border: 0;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+  }
+  .section-heading {
+    display: block;
+  }
+  .section-heading > p:last-child {
+    width: auto;
+    max-width: 510px;
+    margin: 22px 0 0;
+  }
+  .approach-intro {
+    display: block;
+  }
+  .approach-intro > p:last-child {
+    max-width: 570px;
+    margin: 24px 0 0;
+  }
+  .process-timeline {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 60px;
+  }
+  .process-line {
+    display: none;
+  }
+  .process-step {
+    border-top: 1px solid var(--border);
+  }
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+}
+
+@media (max-width: 620px) {
+  .container {
+    width: min(calc(100% - 32px), var(--container));
+  }
+  .section {
+    padding: 82px 0;
+  }
+  .section-heading {
+    margin-bottom: 42px;
+  }
+  .brand {
+    font-size: 0.88rem;
+  }
+  .button-row {
+    flex-direction: column;
+  }
+  .button-row .button {
+    width: 100%;
+  }
+  .positioning-inner {
+    min-height: 112px;
+    padding: 25px 0;
+    text-align: center;
+  }
+  .approach {
+    min-height: 0;
+  }
+  .process .section-heading {
+    margin-bottom: 60px;
+  }
+  .process-timeline {
+    display: block;
+    padding-left: 18px;
+    border-left: 1px solid var(--border);
+  }
+  .process-step {
+    margin-bottom: 45px;
+    padding: 0 0 0 28px;
+    border: 0;
+  }
+  .process-dot {
+    top: 2px;
+    left: -26px;
+  }
+  .final-cta {
+    padding: 105px 0;
+  }
+  .final-cta h2 {
+    font-size: 2.75rem;
+  }
+  .cta-rings {
+    width: 520px;
+    height: 520px;
+  }
+  .footer-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 25px;
+  }
+  .footer-column:last-child {
+    grid-column: 1/-1;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .footer-legal {
+    gap: 18px;
+  }
+}
+
+
+
+/* Editorial imagery and typographic sections */
+@media (max-width: 1100px) {
+  .journey { gap: 20px; }
+}
+@media (max-width: 900px) {
+  .services-grid { gap: 42px 24px; }.service-sales, .service-marketing { padding-top: 50px; }
+  .journey { grid-template-columns: repeat(3,1fr); row-gap: 35px; margin-top: 55px; }
+}
+@media (max-width: 620px) {
+  .services-grid { display: block; }.service-feature { padding: 0; margin-bottom: 45px; }.service-feature:last-child { margin-bottom: 0; }.service-feature .service-image { aspect-ratio: 1.2; }.service-content h3 { font-size: 1.65rem; }.service-content p { font-size: .88rem; }
+  .journey { grid-template-columns: 1fr; gap: 28px; }.journey-step { padding: 24px 34px 0 0; }.journey-step h3 { min-height: 0; }.journey-verb { font-size: 2rem; }.journey-next { position: absolute; top: 25px; right: 0; margin: 0; }.journey-description { max-width: 290px; }
+  .approach-note { display: block; }.approach-note p { margin-top: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-link:hover img, .service-link:focus-visible img { transform: none; }
+  .service-link:hover h3, .service-link:hover .service-arrow { translate: none; }
+}
