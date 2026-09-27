@@ -2,7 +2,7 @@ const currentPage = document.body.dataset.page || "home";
 const currentPageLabel = { home: "Home", services: "Services", about: "About", why: "Why SSA", contact: "Contact" }[currentPage];
 const homeLink = anchor => currentPage === "home" ? anchor : `index.html${anchor}`;
 const navItems = [
-  ["Home", homeLink("#home")], ["Services", "services.html"],
+  ["Home", "/"], ["Services", "services.html"],
   ["About", "about.html"], ["Why SSA", "why-ssa.html"], ["Contact", "contact.html"]
 ];
 const serviceItems = [
@@ -12,8 +12,8 @@ const serviceItems = [
 ];
 
 const brand = `
-  <a class="brand" href="${homeLink("#home")}" aria-label="SSA Consulting Inc. home">
-    <img class="brand-logo" src="assets/images/logo-white.png" alt="SSA Consultants Inc." width="3600" height="3600" decoding="async">
+  <a class="brand" href="/" aria-label="SSA Consulting Inc. home">
+    <img class="brand-logo" src="assets/images/logo-white.png" alt="SSA Consulting Inc." width="3600" height="3600" decoding="async">
   </a>`;
 
 export class SiteHeader extends HTMLElement {
