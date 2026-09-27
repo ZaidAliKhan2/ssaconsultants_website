@@ -66,7 +66,7 @@ The AI story retains its native sticky stage and original sequencing. Its single
 
 ## Services page
 
-Open `services.html` through the same local server. Its service anchors are `#sales-pos`, `#web-development`, `#customer-experience`, `#digital-marketing` and `#ai-automation`. Homepage service links and shared footer links point to these anchors. The shared header marks Services as the current page, links About to `about.html` and Why SSA to `why-ssa.html`, and sends Home back to the homepage.
+Open `services.html` through the same local server. Its service anchors are `#pos-solutions`, `#web-development`, `#customer-support`, `#digital-marketing` and `#ai-automation`. Homepage service links and shared footer links point to these anchors. The shared header marks Services as the current page, links About to `about.html` and Why SSA to `why-ssa.html`, and sends Home back to the homepage.
 
 The service index sits beneath the fixed header. CSS anchor offsets account for both navigation bars; mobile keeps the index on one horizontally scrollable line. Scroll highlighting uses cached section measurements and a scheduled animation frame. The AI introduction sticks on sufficiently large/tall viewports while the five use cases scroll normally; reduced motion and smaller screens use normal document flow. GSAP reveals are optional, with readable content if the library is unavailable.
 
@@ -106,4 +106,4 @@ Submission handling is checked with mocked responses only, without sending test 
 
 The page uses native controls and static brand graphics with no additional animation library. `npm test` checks all five pages without opening a browser. Visual QA remains manual.
 
-Contact routing uses `contact.html?service=<value>#inquiry` for service inquiries. The five accepted values are `sales-pos`, `web-development`, `customer-experience`, `digital-marketing` and `ai-automation`. The form matches the query value against native service checkboxes and sets `checked`, so the choice is part of form data and remains freely editable. Unknown values are ignored. The inquiry section uses the existing 100px anchor offset for the fixed header. Informational service links still lead to Services sections; no contact-form modal is used; the only dialog confirms an accepted submission.
+Contact routing uses `contact.html?service=<value>#inquiry` for service inquiries. The five accepted values are `pos-solutions`, `web-development`, `customer-support`, `digital-marketing` and `ai-automation`. The form matches the query value against native service checkboxes and sets `checked`, so the choice is part of form data and remains freely editable. Unknown values are ignored. The inquiry section uses the existing 100px anchor offset for the fixed header. Informational service links still lead to Services sections; no contact-form modal is used; the only dialog confirms an accepted submission.

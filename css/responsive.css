@@ -180,7 +180,7 @@
   .journey { gap: 20px; }
 }
 @media (max-width: 900px) {
-  .services-grid { gap: 42px 24px; }.service-sales, .service-marketing { padding-top: 50px; }
+  .services-grid { gap: 42px 24px; }.service-pos, .service-marketing { padding-top: 50px; }
   .journey { grid-template-columns: repeat(3,1fr); row-gap: 35px; margin-top: 55px; }
 }
 @media (max-width: 620px) {

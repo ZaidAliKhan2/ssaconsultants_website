@@ -17,8 +17,8 @@ export function initContactForm() {
   const submitLabel = submit.querySelector('[data-submit-label]');
   const confirmation = document.getElementById('inquiry-confirmation');
   const serviceNames = {
-    'sales-pos': 'Sales & POS', 'web-development': 'Web Development',
-    'customer-experience': 'Customer Experience', 'digital-marketing': 'Digital Marketing',
+    'pos-solutions': 'POS Solutions', 'web-development': 'Web Development',
+    'customer-support': 'Customer Support', 'digital-marketing': 'Digital Marketing',
     'ai-automation': 'AI & Automation'
   };
   const touched = new Set();

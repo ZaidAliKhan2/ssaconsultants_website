@@ -25,7 +25,7 @@
 .detail-photo img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
 .detail-photo:hover img { transform: scale(1.035); }
 .detail-photo figcaption { position: absolute; inset: auto 0 0; padding: 65px 26px 24px; background: linear-gradient(transparent,#0b1020c7); color: white; font-size: .78rem; }
-.sales-photo { aspect-ratio: 4 / 5; }.sales-photo img { object-position: 52% center; }
+.pos-photo { aspect-ratio: 4 / 5; }.pos-photo img { object-position: 52% center; }
 .capability-list { list-style: none; margin: 32px 0; padding: 0; border-top: 1px solid var(--border); }
 .capability-list li { padding: 13px 0; border-bottom: 1px solid var(--border); font-size: .9rem; }
 .capability-columns { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 22px; }
@@ -113,7 +113,7 @@
   .service-navigation-track { gap: 30px; justify-content: flex-start; }
   .detail-split, .marketing-layout, .automation-editorial { grid-template-columns: 1fr; gap: 50px; }
   .detail-copy { max-width: 680px; }
-  .sales-photo, .web-photo { aspect-ratio: 1.4; }
+  .pos-photo, .web-photo { aspect-ratio: 1.4; }
   .support-copy { max-width: 600px; }.support-detail { min-height: 760px; }
   .support-detail::after { background: linear-gradient(90deg,#0b1020ec,#0b1020b3); }
   .marketing-collage { max-width: 720px; }
@@ -130,7 +130,7 @@
   .services-hero-heading > p { font-size: .95rem; }
   .services-intro-label { margin-bottom: 30px; }
   .service-navigation a { font-size: .76rem; }
-  .sales-photo { aspect-ratio: 1.05; }.web-photo { aspect-ratio: 1.15; }
+  .pos-photo { aspect-ratio: 1.05; }.web-photo { aspect-ratio: 1.15; }
   .detail-photo figcaption { padding: 50px 20px 20px; font-size: .72rem; }
   .detail-copy h2 { font-size: 2.55rem; }
   .capability-columns { grid-template-columns: 1fr; }

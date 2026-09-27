@@ -23,7 +23,7 @@
 .why-map-node, .why-map-business, .why-map-partner { position: absolute; transform: translate(-50%,-50%); white-space: nowrap; }
 .why-map-node { padding: 8px 6px; color: var(--text-muted); background: var(--white); font-size: .88rem; }
 .why-node-marketing { left: 18%; top: 16%; }.why-node-web { left: 80%; top: 16%; }
-.why-node-sales { left: 14%; top: 75%; }.why-node-support { left: 85%; top: 75%; }
+.why-node-pos { left: 14%; top: 75%; }.why-node-support { left: 85%; top: 75%; }
 .why-node-technology { left: 50%; top: 90%; }
 .why-map-business { left: 50%; top: 50%; padding: 13px 18px; border-block: 1px solid var(--border); background: var(--white); color: var(--text); font: 600 clamp(1.05rem,1.7vw,1.4rem)/1.3 var(--font-display); letter-spacing: -.025em; }
 .why-reasons { background: var(--off-white); }

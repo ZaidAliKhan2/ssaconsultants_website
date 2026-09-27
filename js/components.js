@@ -6,8 +6,8 @@ const navItems = [
   ["About", "about.html"], ["Why SSA", "why-ssa.html"], ["Contact", "contact.html"]
 ];
 const serviceItems = [
-  ["Sales &amp; POS Solutions", "sales-pos"], ["Web Development", "web-development"],
-  ["Customer Experience", "customer-experience"], ["Digital Marketing", "digital-marketing"],
+  ["POS Solutions", "pos-solutions"], ["Web Development", "web-development"],
+  ["Customer Support", "customer-support"], ["Digital Marketing", "digital-marketing"],
   ["AI &amp; Automation", "ai-automation"]
 ];
 

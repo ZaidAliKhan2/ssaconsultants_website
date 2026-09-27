@@ -18,7 +18,7 @@ Distinct service and Why SSA imagery:
 - `workflow-team` (AI & Automation service): https://www.pexels.com/photo/7651734/
 - `purposeful-tools` (Why SSA / Technology with purpose): https://www.pexels.com/photo/6930432/
 
-Services page Sales & POS photography:
+Services page POS Solutions photography:
 - `retail-payment`: https://www.pexels.com/photo/6925795/ (Tom Tillhub / Pexels)
 
 About page — fresh editorial photography, distinct from Home and Services:
